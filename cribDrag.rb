@@ -3,11 +3,11 @@
 # change dictionary based on your needs. 
 # the dictionary is right below this line
 
-dictionary = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.?,-:;'() ".split("")
+@dictionary = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.?,-:;'() ".split("")
 
-def vaild(st)
+def valid(st)
 	v = true
-	arr = dictionary
+	arr = @dictionary 
 	st.each{|i|
 		if(arr.include?(i.chr) == false)
 			v = false
@@ -51,7 +51,7 @@ len.times{|s|
 	}
 
 	check = xorme(st, crib)
-	if(vaild(check))
+	if(valid(check))
 		puts "#{s}: #{getStr(check)}"
 	end
 
